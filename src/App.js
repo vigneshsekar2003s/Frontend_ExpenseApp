@@ -6,7 +6,9 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const API = "http://localhost:5000/api/expenses";
+const API = window.location.hostname === "localhost"
+  ? "http://localhost:5000/api/expenses"
+  : "https://expense-backend.onrender.com/api/expenses";
 
 function App() {
   const [title, setTitle] = useState("");
