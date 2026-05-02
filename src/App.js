@@ -8,7 +8,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 const API = window.location.hostname === "localhost"
   ? "http://localhost:5000/api/expenses"
-  : "https://expense-backend.onrender.com/api/expenses";
+  : "https://backend-expenseapp-7.onrender.com/api/expenses";
 
 function App() {
   const [title, setTitle] = useState("");
